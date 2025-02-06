@@ -37,3 +37,21 @@ class Inventory():
     def calculate_total_value(self):
         print("Calculating total value")
 
+
+def print_menu():
+    print("1. Add item")
+    print("2. Update existing item")
+    print("3. Remove item")
+    print("4. Display information")
+    print("5. Calculate total inventory value")
+    print("6. Exit")
+
+if __name__ == "__main__":
+    keepGoing = True
+    while keepGoing:
+        print_menu()
+        choice = input("Enter choice: ")
+        while(choice < 1 or choice > 6):
+            print("\n\nInvalid choice")
+            print_menu()
+            choice = input("Enter choice: ")
